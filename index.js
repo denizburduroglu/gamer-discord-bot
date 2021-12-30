@@ -60,6 +60,9 @@ client.on('interactionCreate', async (interaction) => {
   if (commandName === 'clear') {
     client.commands.get('clear').execute(interaction, interaction?.options?.getInteger('int'));
   }
+  if (commandName === 'balrog') {
+    client.commands.get('balrog').execute(interaction, process.env.TheOneAPI_accessToken);
+  }
 });
 
 // Login will be at the end of the actions that you define for the client
